@@ -1,7 +1,7 @@
 skypelog
 ========
 
-Read Skype messages even if they are removed by sender.
+Read Skype messages even if they are removed by senders.
 
 OK, small how-to to start with.
 
