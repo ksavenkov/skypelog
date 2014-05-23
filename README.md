@@ -8,6 +8,14 @@ OK, small how-to to start with.
 On MacOS and Linux, Skype stores all messages in SQLite database. The obvious idea is to create a table to store all messages inserted in that table. When someone removes his message, the table with messages will be updated with an empty message.
 But our copy won't. Hooray!
 
+If you're a Linux user, you can skip walkthrough and use the shell scripts:
+
+* `install.sh <YOUR SKYPE LOGIN>` for setting logger up;
+
+* `read.sh <YOUR SKYPE LOGIN> <SKYPE LOGIN OF MESSAGE AUTHOR>` for reading edited/removed messages of specified user;
+
+* `uninstall.sh <YOUR SKYPE LOGIN>` for logger removal.
+
 Walkthrough:
 
 1. Login to the skype DB on your local machine:

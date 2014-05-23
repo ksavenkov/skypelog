@@ -1,0 +1,2 @@
+sqlite3 ~/.Skype/$1/main.db "CREATE TABLE skypelog (author TEXT, from_dispname TEXT, timestamp INTEGER, body_xml TEXT);"
+sqlite3 ~/.Skype/$1/main.db "CREATE TRIGGER update_skypelog AFTER UPDATE ON Messages BEGIN INSERT INTO skypelog SELECT new.author, new.from_dispname, new.timestamp, new.body_xml WHERE (SELECT count(*) FROM skypelog WHERE timestamp = new.timestamp AND body_xml = new.body_xml) = 0; END;"

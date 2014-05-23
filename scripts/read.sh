@@ -1,0 +1,1 @@
+sqlite3 ~/.Skype/$1/main.db "SELECT l.from_dispname, l.body_xml FROM skypelog l LEFT JOIN Messages m ON l.timestamp = m.timestamp and l.body_xml = m.body_xml WHERE l.author = \"$2\" AND m.timestamp is null;"
